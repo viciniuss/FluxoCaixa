@@ -15,27 +15,17 @@ docker compose up --build
 ⚙️ Migrations EF Core
 Para aplicar migrations localmente:
 
-bash
-Copiar
-Editar
 dotnet ef migrations add InitialCreate -p FluxoCaixa.Infrastructure -s FluxoCaixa.WebApi
 dotnet ef database update -p FluxoCaixa.Infrastructure -s FluxoCaixa.WebApi
 ✅ Testes Automatizados
 Execute os testes unitários e de integração com:
 
-bash
-Copiar
-Editar
 dotnet test
 🧪 Exemplos de Endpoints
 Criar Lançamento
 
-http
-Copiar
-Editar
 POST /api/lancamentos
 Content-Type: application/json
-
 {
   "data": "2025-04-07",
   "valor": 150.00,
@@ -43,15 +33,11 @@ Content-Type: application/json
 }
 Consultar Lançamentos
 
-http
-Copiar
-Editar
 GET /api/lancamentos
 📦 Variáveis de Ambiente
 appsettings.json
 json
-Copiar
-Editar
+
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=sqlserver;Database=FluxoCaixaDb;User Id=sa;Password=YourStrong!Passw0rd;"
